@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --palette-1: #7FA5C8;
+  /* Slate Blue */
+  --palette-2: #A8C6DB;
+  /* Ice Blue */
+  --palette-3: #F5E9DA;
+  /* Warm Cream */
+  --palette-4: #D3C5B8;
+  /* Greige / Muted Sand */
+
+  --background: linear-gradient(135deg, #7FA5C8 0%, #A8C6DB 35%, #F5E9DA 70%, #D3C5B8 100%);
+  --foreground: #320A6B;
+  /* Deep Royal Indigo */
+  --primary: #7FA5C8;
+  --primary-hover: #5B83A8;
+}
+
+.dark {
+  --background: linear-gradient(135deg, #0F172A 0%, #1E293B 40%, #2A3B4E 75%, #3B4E63 100%);
+  --foreground: #A5158C;
+  /* Deep Vibrant Magenta */
+  --primary: #7FA5C8;
+  --primary-hover: #A8C6DB;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-geist-sans), Inter, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 }
 
 body {
   background: var(--background);
+  background-attachment: fixed;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  min-height: 100vh;
+}
+
+/* Day Mode Font Overrides */
+:root:not(.dark) {
+  color: #320A6B;
+}
+
+:root:not(.dark) .text-zinc-400,
+:root:not(.dark) .text-zinc-500,
+:root:not(.dark) .text-zinc-550,
+:root:not(.dark) .text-zinc-600,
+:root:not(.dark) .text-zinc-650,
+:root:not(.dark) .text-zinc-700,
+:root:not(.dark) .text-zinc-800,
+:root:not(.dark) .text-zinc-900 {
+  color: #065084 !important;
+}
+
+/* Night Mode Font Overrides */
+.dark {
+  color: #A5158C;
+}
+
+.dark .text-zinc-400,
+.dark .text-zinc-500,
+.dark .text-zinc-550,
+.dark .text-zinc-600,
+.dark .text-zinc-650,
+.dark .text-zinc-700,
+.dark .text-zinc-800,
+.dark .text-zinc-900 {
+  color: #A5158C !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Flashcard CSS Flip */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card-flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
 }
