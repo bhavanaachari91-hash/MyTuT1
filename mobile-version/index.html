@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>myTuT - Gamified Learning & Study App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header Bar -->
+  <header class="mobile-header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🚀</span>
+        <span class="logo-text">myTuT</span>
+      </a>
+      <!-- Navigation Menu -->
+      <nav class="mobile-drawer" id="mobileDrawer">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#benefits" class="nav-link">Benefits</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+        <a href="#download" class="nav-link">App Download</a>
+        <div class="drawer-actions">
+          <a href="#signup" class="btn btn-primary btn-full">Get Started</a>
+        </div>
+      </nav>
+      <button class="hamburger-btn" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-badge">✨ Next-Gen Education</div>
+    <h1 class="hero-title">Learn. Compete. <span class="gradient-text">Excel.</span></h1>
+    <p class="hero-subtitle">
+      Transform traditional learning into an exciting gamified experience with live contests, adaptive study plans, micro-learning, and parent tracking.
+    </p>
+    
+    <div class="hero-cta-group">
+      <a href="#download" class="btn btn-primary btn-full">
+        <span>Download Mobile App</span>
+        <span class="btn-arrow">→</span>
+      </a>
+      <a href="#features" class="btn btn-secondary btn-full">Explore Features</a>
+    </div>
+
+    <div class="mobile-preview-card">
+      <div class="app-card-header">
+        <span class="app-dot red"></span>
+        <span class="app-dot yellow"></span>
+        <span class="app-dot green"></span>
+        <span class="app-title">Weekly Math Contest #42</span>
+      </div>
+      <div class="app-card-body">
+        <div class="contest-status">🔥 LIVE NOW • 1,420 Active Students</div>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill"></div>
+        </div>
+        <div class="app-card-footer">
+          <span>Rank: #4</span>
+          <span class="xp-badge">+350 XP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats Carousel / Grid -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon indigo">👥</div>
+        <div class="stat-value">15,000+</div>
+        <div class="stat-label">Active Students</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon amber">🏆</div>
+        <div class="stat-value">1,200+</div>
+        <div class="stat-label">Contests Held</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon emerald">⚡</div>
+        <div class="stat-value">500,000+</div>
+        <div class="stat-label">Questions Solved</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon rose">🎖️</div>
+        <div class="stat-value">250+</div>
+        <div class="stat-label">Partner Schools</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features Section -->
+  <section class="features-section" id="features">
+    <div class="section-header">
+      <span class="sub-heading">WHY CHOOSE MYTUT</span>
+      <h2 class="section-title">Designed for Modern Learning</h2>
+      <p class="section-desc">Empowering students with smart tools and instant feedback.</p>
+    </div>
+
+    <div class="features-list">
+      <!-- Feature Card 1 -->
+      <div class="feature-card">
+        <div class="feature-icon amber-bg">🏆</div>
+        <h3 class="feature-title">Gamified Contests</h3>
+        <p class="feature-desc">Compete in weekly subject battles. Earn XP, rank up on the leaderboard, and win achievement certificates.</p>
+        <span class="feature-tag">Popular</span>
+      </div>
+
+      <!-- Feature Card 2 -->
+      <div class="feature-card">
+        <div class="feature-icon indigo-bg">📅</div>
+        <h3 class="feature-title">Adaptive Study Planner</h3>
+        <p class="feature-desc">Design personalized daily, weekly, and monthly calendars. Monitor tasks and hit learning goals easily.</p>
+      </div>
+
+      <!-- Feature Card 3 -->
+      <div class="feature-card">
+        <div class="feature-icon emerald-bg">⚡</div>
+        <h3 class="feature-title">Quick Bites</h3>
+        <p class="feature-desc">Boost revision in 5 minutes. Master core concepts with interactive flashcards, formulas, and fast quizzes.</p>
+      </div>
+
+      <!-- Feature Card 4 -->
+      <div class="feature-card">
+        <div class="feature-icon rose-bg">👨‍👩‍👧</div>
+        <h3 class="feature-title">Parent Insights</h3>
+        <p class="feature-desc">Real-time child tracking, analytics charts, teacher feedback notifications, and comprehensive weekly reports.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section" id="benefits">
+    <div class="section-header">
+      <span class="sub-heading">TAILORED EXPERIENCE</span>
+      <h2 class="section-title">Built for Everyone</h2>
+    </div>
+
+    <div class="benefit-tabs">
+      <button class="tab-btn active" id="tabStudent">For Students</button>
+      <button class="tab-btn" id="tabParent">For Parents</button>
+    </div>
+
+    <div class="benefit-content" id="studentContent">
+      <div class="benefit-item">
+        <span class="check-icon">✓</span>
+        <span>Earn XP, custom badges, and climb levels like a game.</span>
+      </div>
+      <div class="benefit-item">
+        <span class="check-icon">✓</span>
+        <span>Compete with peers globally or in your classroom.</span>
+      </div>
+      <div class="benefit-item">
+        <span class="check-icon">✓</span>
+        <span>Bite-sized revision content makes learning stress-free.</span>
+      </div>
+      <div class="benefit-item">
+        <span class="check-icon">✓</span>
+        <span>Receive beautiful certificates for winning contests.</span>
+      </div>
+    </div>
+
+    <div class="benefit-content hidden" id="parentContent">
+      <div class="benefit-item">
+        <span class="check-icon">✓</span>
+        <span>Detailed performance charts tracking progress over time.</span>
+      </div>
+      <div class="benefit-item">
+        <span class="check-icon">✓</span>
+        <span>Attendance logs and updates on contest participations.</span>
+      </div>
+      <div class="benefit-item">
+        <span class="check-icon">✓</span>
+        <span>Constructive teacher feedback and direct messaging.</span>
+      </div>
+      <div class="benefit-item">
+        <span class="check-icon">✓</span>
+        <span>Weekly notifications summarizing achievements.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="section-header">
+      <span class="sub-heading">TESTIMONIALS</span>
+      <h2 class="section-title">Loved by Thousands</h2>
+    </div>
+
+    <div class="testimonial-slider">
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"mytut completely transformed the way my son studies. He actually looks forward to the weekly science contests!"</p>
+        <div class="author">
+          <div class="avatar">S</div>
+          <div>
+            <div class="author-name">Sunita Sharma</div>
+            <div class="author-role">Parent of 8th Grader</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Download CTA -->
+  <section class="download-section" id="download">
+    <div class="download-card">
+      <span class="download-icon">🤖</span>
+      <h2 class="download-title">Get the Android App Today</h2>
+      <p class="download-desc">Available on Android. Practice anywhere, anytime.</p>
+      <div class="store-buttons">
+        <a href="#" class="store-btn">
+          <span class="store-icon">🤖</span>
+          <div class="store-text">
+            <span class="small-text">GET IT ON</span>
+            <span class="big-text">Google Play</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Footer -->
+  <footer class="mobile-footer">
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <span>•</span>
+      <a href="#">Terms of Service</a>
+      <span>•</span>
+      <a href="#">Support</a>
+    </div>
+    <p class="copyright">© 2026 myTuT Inc. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple Hamburger Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileDrawer.classList.toggle('open');
+    });
+
+    // Close menu when clicking links
+    document.querySelectorAll('.mobile-drawer .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        mobileDrawer.classList.remove('open');
+      });
+    });
+
+    // Benefits Tab Toggle
+    const tabStudent = document.getElementById('tabStudent');
+    const tabParent = document.getElementById('tabParent');
+    const studentContent = document.getElementById('studentContent');
+    const parentContent = document.getElementById('parentContent');
+
+    tabStudent.addEventListener('click', () => {
+      tabStudent.classList.add('active');
+      tabParent.classList.remove('active');
+      studentContent.classList.remove('hidden');
+      parentContent.classList.add('hidden');
+    });
+
+    tabParent.addEventListener('click', () => {
+      tabParent.classList.add('active');
+      tabStudent.classList.remove('active');
+      parentContent.classList.remove('hidden');
+      studentContent.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
