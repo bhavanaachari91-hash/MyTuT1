@@ -1,5 +1,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "mytut",
-  "pages_build_output_dir": "./out"
+  "compatibility_date": "2026-08-31",
+  "assets": {
+    "directory": "./out"
+  }
 }
+
