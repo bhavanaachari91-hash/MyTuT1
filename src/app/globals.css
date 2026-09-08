@@ -74,10 +74,8 @@ body {
 
 /* Mobile Phone Dark Mode Override: Rust Orange Font */
 @media (max-width: 767px) {
-  .dark {
-    color: #D9531E !important;
-  }
-
+  .dark,
+  .dark *,
   .dark p,
   .dark span,
   .dark h1,
@@ -89,17 +87,19 @@ body {
   .dark a,
   .dark label,
   .dark div,
-  .dark .text-zinc-400,
-  .dark .text-zinc-500,
-  .dark .text-zinc-550,
-  .dark .text-zinc-600,
-  .dark .text-zinc-650,
-  .dark .text-zinc-700,
-  .dark .text-zinc-800,
-  .dark .text-zinc-900 {
+  .dark button,
+  .dark input,
+  .dark [class*="text-"] {
     color: #D9531E !important;
   }
 }
+
+@media (max-width: 767px) and (prefers-color-scheme: dark) {
+  body, p, span, h1, h2, h3, h4, h5, h6, a, label, div, button, input {
+    color: #D9531E !important;
+  }
+}
+
 
 
 /* Custom Scrollbars */
