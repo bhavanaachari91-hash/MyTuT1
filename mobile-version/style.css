@@ -920,18 +920,21 @@ a {
   }
 }
 
-/* Mobile Phone Dark Mode Override: Red Font */
-@media (max-width: 767px) and (prefers-color-scheme: dark), (max-width: 767px) {
-  .dark, .dark *, body.dark, body.dark *, html.dark, html.dark * {
-    color: #FF0000 !important;
+/* Mobile Dark Mode Color Palette Integration */
+@media (max-width: 767px) {
+  .dark, body.dark, html.dark {
+    background: linear-gradient(135deg, #594F4F 0%, #547980 40%, #45ADA8 75%, #594F4F 100%) !important;
+    color: #E5FCC2 !important;
   }
-}
 
-@media (max-width: 767px) and (prefers-color-scheme: dark) {
-  body, p, span, h1, h2, h3, h4, h5, h6, a, label, div, button, input,
-  .hero-title, .hero-subtitle, .section-title, .section-desc, .feature-title, .feature-desc,
-  .nav-link, .stat-value, .stat-label, .author-name, .author-role, .quote, .copyright {
-    color: #FF0000 !important;
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
+  body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+    color: #9DE0AD !important;
+  }
+
+  .dark p, .dark span, .dark a, .dark label, .dark div, .dark button, .dark input,
+  body.dark p, body.dark span, body.dark a, body.dark label, body.dark div, body.dark button, body.dark input {
+    color: #E5FCC2 !important;
   }
 }
 

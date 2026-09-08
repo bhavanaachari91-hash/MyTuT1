@@ -72,31 +72,39 @@ body {
   color: #A5158C !important;
 }
 
-/* Mobile Phone Dark Mode Override: #FF0000 Font */
+/* Mobile Dark Mode Color Palette Integration */
 @media (max-width: 767px) {
-  .dark,
-  .dark *,
-  .dark p,
-  .dark span,
-  .dark h1,
-  .dark h2,
-  .dark h3,
-  .dark h4,
-  .dark h5,
-  .dark h6,
-  .dark a,
-  .dark label,
-  .dark div,
-  .dark button,
-  .dark input,
-  .dark [class*="text-"] {
-    color: #FF0000 !important;
+  .dark {
+    --background: linear-gradient(135deg, #594F4F 0%, #547980 40%, #45ADA8 75%, #594F4F 100%) !important;
+    --foreground: #E5FCC2 !important;
+    background: linear-gradient(135deg, #594F4F 0%, #547980 40%, #45ADA8 75%, #594F4F 100%) !important;
+    color: #E5FCC2 !important;
   }
-}
 
-@media (max-width: 767px) and (prefers-color-scheme: dark) {
-  body, p, span, h1, h2, h3, h4, h5, h6, a, label, div, button, input {
-    color: #FF0000 !important;
+  .dark body {
+    background: linear-gradient(135deg, #594F4F 0%, #547980 40%, #45ADA8 75%, #594F4F 100%) !important;
+    color: #E5FCC2 !important;
+  }
+
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #9DE0AD !important;
+  }
+
+  .dark p, .dark span, .dark a, .dark label, .dark button, .dark input, .dark [class*="text-"] {
+    color: #E5FCC2 !important;
+  }
+
+  .dark .bg-white, .dark .bg-zinc-900, .dark .bg-zinc-950, .dark .bg-zinc-800 {
+    background-color: rgba(89, 79, 79, 0.85) !important;
+    border-color: rgba(69, 173, 168, 0.4) !important;
+  }
+
+  .dark .text-indigo-600, .dark .text-indigo-400, .dark .text-indigo-650 {
+    color: #45ADA8 !important;
+  }
+
+  .dark .bg-indigo-600, .dark .bg-indigo-500 {
+    background-color: #547980 !important;
   }
 }
 
