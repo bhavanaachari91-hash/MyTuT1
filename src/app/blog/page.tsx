@@ -325,11 +325,11 @@ function renderFormattedContent(content: string) {
             <h3 
               key={i} 
               className={isCTAHeader 
-                ? "text-sm sm:text-base font-extrabold text-indigo-700 dark:text-indigo-300 pt-4 pb-2 border-b-2 border-indigo-500/40 flex items-center gap-2 mt-6" 
-                : "text-sm font-bold text-zinc-900 dark:text-white pt-2 pb-0.5 border-b border-zinc-100 dark:border-zinc-800/60 flex items-center gap-1.5"
+                ? "text-lg sm:text-xl font-extrabold text-indigo-700 dark:text-indigo-300 pt-6 pb-2 border-b-2 border-indigo-500/40 flex items-center gap-2 mt-8" 
+                : "text-lg sm:text-xl font-bold text-zinc-900 dark:text-white pt-4 pb-1 border-b border-zinc-100 dark:border-zinc-800/60 flex items-center gap-2 mt-4"
               }
             >
-              <span className="w-1.5 h-3.5 bg-indigo-600 rounded-full inline-block"></span>
+              <span className="w-2.5 h-5 bg-indigo-600 rounded-full inline-block"></span>
               {renderTextWithLinks(headingText)}
             </h3>
           );
@@ -337,7 +337,7 @@ function renderFormattedContent(content: string) {
 
         if (trimmed.startsWith('#### ')) {
           return (
-            <h4 key={i} className="text-xs font-bold text-indigo-600 dark:text-indigo-400 pt-1.5">
+            <h4 key={i} className="text-base sm:text-lg font-bold text-indigo-600 dark:text-indigo-400 pt-3">
               {renderTextWithLinks(trimmed.replace('#### ', ''))}
             </h4>
           );
@@ -346,7 +346,7 @@ function renderFormattedContent(content: string) {
         if (trimmed.startsWith('> ')) {
           const quoteText = trimmed.replace(/^>\s*/, '').replace(/^"|"$/g, '');
           return (
-            <blockquote key={i} className="p-3 my-2 bg-indigo-50/70 dark:bg-indigo-950/30 border-l-3 border-indigo-600 rounded-r-lg italic text-indigo-950 dark:text-indigo-200 font-medium text-xs shadow-sm">
+            <blockquote key={i} className="p-4 sm:p-6 my-4 bg-indigo-50/80 dark:bg-indigo-950/40 border-l-4 border-indigo-600 rounded-r-xl italic text-indigo-950 dark:text-indigo-200 font-medium text-base sm:text-lg shadow-sm leading-relaxed">
               "{renderTextWithLinks(quoteText)}"
             </blockquote>
           );
@@ -356,16 +356,16 @@ function renderFormattedContent(content: string) {
           const lines = trimmed.split('\n').filter(l => l.trim().startsWith('- '));
           const intro = trimmed.split('\n- ')[0].startsWith('- ') ? null : trimmed.split('\n')[0];
           return (
-            <div key={i} className="space-y-1.5 my-1.5">
-              {intro && <p className="font-medium text-zinc-800 dark:text-zinc-200 text-xs">{renderTextWithLinks(intro)}</p>}
-              <ul className="space-y-1.5 pl-1">
+            <div key={i} className="space-y-2.5 my-3">
+              {intro && <p className="font-medium text-zinc-800 dark:text-zinc-200 text-base sm:text-lg leading-relaxed">{renderTextWithLinks(intro)}</p>}
+              <ul className="space-y-2.5 pl-1">
                 {lines.map((line, idx) => {
                   const cleanLine = line.replace(/^- /, '');
                   const parts = cleanLine.split('**');
                   if (parts.length >= 3) {
                     return (
-                      <li key={idx} className="flex items-start gap-2 text-xs">
-                        <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-1 shrink-0"></span>
+                      <li key={idx} className="flex items-start gap-2.5 text-base sm:text-lg leading-relaxed">
+                        <span className="h-2.5 w-2.5 rounded-full bg-indigo-500 mt-2 shrink-0"></span>
                         <span>
                           <strong className="font-semibold text-zinc-900 dark:text-white">{parts[1]}</strong>
                           {renderTextWithLinks(parts.slice(2).join(''))}
@@ -374,8 +374,8 @@ function renderFormattedContent(content: string) {
                     );
                   }
                   return (
-                    <li key={idx} className="flex items-start gap-2 text-xs">
-                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-1 shrink-0"></span>
+                    <li key={idx} className="flex items-start gap-2.5 text-base sm:text-lg leading-relaxed">
+                      <span className="h-2.5 w-2.5 rounded-full bg-indigo-500 mt-2 shrink-0"></span>
                       <span>{renderTextWithLinks(cleanLine)}</span>
                     </li>
                   );
@@ -389,11 +389,11 @@ function renderFormattedContent(content: string) {
           const parts = trimmed.split('**');
           if (parts.length >= 3) {
             return (
-              <div key={i} className="bg-zinc-50 dark:bg-zinc-850/60 p-3 rounded-xl border border-zinc-200/60 dark:border-zinc-800 space-y-1">
-                <p className="font-bold text-zinc-900 dark:text-white text-xs">
+              <div key={i} className="bg-zinc-50 dark:bg-zinc-850/60 p-4 sm:p-6 rounded-2xl border border-zinc-200/60 dark:border-zinc-800 space-y-2 shadow-xs my-3">
+                <p className="font-bold text-zinc-900 dark:text-white text-base sm:text-lg">
                   {renderTextWithLinks(parts[1])}
                 </p>
-                <p className="text-xs text-zinc-600 dark:text-zinc-350">
+                <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-350 leading-relaxed">
                   {renderTextWithLinks(parts.slice(2).join('').replace(/^\s*<br\s*\/?>\s*/, '').trim())}
                 </p>
               </div>
@@ -403,8 +403,8 @@ function renderFormattedContent(content: string) {
 
         if (trimmed.startsWith('Download the TuT App now')) {
           return (
-            <div key={i} className="my-3 p-3.5 rounded-2xl bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-950/50 border border-indigo-200/80 dark:border-indigo-800/60 shadow-xs">
-              <p className="font-semibold text-zinc-900 dark:text-white text-xs leading-relaxed">
+            <div key={i} className="my-4 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-950/50 border border-indigo-200/80 dark:border-indigo-800/60 shadow-xs">
+              <p className="font-semibold text-zinc-900 dark:text-white text-base sm:text-lg leading-relaxed">
                 {renderTextWithLinks(trimmed)}
               </p>
             </div>
@@ -413,7 +413,7 @@ function renderFormattedContent(content: string) {
 
         const parts = trimmed.split('**');
         return (
-          <p key={i} className="leading-relaxed text-xs">
+          <p key={i} className="leading-relaxed text-base sm:text-lg my-3">
             {parts.map((part, pIdx) => 
               pIdx % 2 === 1 ? (
                 <strong key={pIdx} className="font-semibold text-zinc-900 dark:text-white">{renderTextWithLinks(part)}</strong>
@@ -618,13 +618,13 @@ export default function Blog() {
                     className="group bg-white dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800/50 rounded-3xl p-6 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between hover:-translate-y-0.5"
                   >
                     <div className="space-y-3">
-                      <span className="text-[10px] font-bold text-indigo-650 dark:text-indigo-400 uppercase tracking-widest block">
+                      <span className="text-xs font-bold text-indigo-650 dark:text-indigo-400 uppercase tracking-widest block">
                         {art.category}
                       </span>
-                      <h3 className="font-bold text-base leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                      <h3 className="font-bold text-lg sm:text-xl leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                         {art.title}
                       </h3>
-                      <p className="text-xs text-zinc-550 dark:text-zinc-450 line-clamp-3 leading-relaxed">
+                      <p className="text-sm text-zinc-550 dark:text-zinc-450 line-clamp-3 leading-relaxed">
                         {art.summary}
                       </p>
                     </div>

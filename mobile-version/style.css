@@ -920,10 +920,10 @@ a {
   }
 }
 
-/* Mobile Phone Dark Mode Override: Rust Orange Font */
+/* Mobile Phone Dark Mode Override: Red Font */
 @media (max-width: 767px) and (prefers-color-scheme: dark), (max-width: 767px) {
   .dark, .dark *, body.dark, body.dark *, html.dark, html.dark * {
-    color: #D9531E !important;
+    color: #FF0000 !important;
   }
 }
 
@@ -931,7 +931,7 @@ a {
   body, p, span, h1, h2, h3, h4, h5, h6, a, label, div, button, input,
   .hero-title, .hero-subtitle, .section-title, .section-desc, .feature-title, .feature-desc,
   .nav-link, .stat-value, .stat-label, .author-name, .author-role, .quote, .copyright {
-    color: #D9531E !important;
+    color: #FF0000 !important;
   }
 }
 

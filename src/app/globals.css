@@ -72,7 +72,7 @@ body {
   color: #A5158C !important;
 }
 
-/* Mobile Phone Dark Mode Override: Rust Orange Font */
+/* Mobile Phone Dark Mode Override: #FF0000 Font */
 @media (max-width: 767px) {
   .dark,
   .dark *,
@@ -90,13 +90,13 @@ body {
   .dark button,
   .dark input,
   .dark [class*="text-"] {
-    color: #D9531E !important;
+    color: #FF0000 !important;
   }
 }
 
 @media (max-width: 767px) and (prefers-color-scheme: dark) {
   body, p, span, h1, h2, h3, h4, h5, h6, a, label, div, button, input {
-    color: #D9531E !important;
+    color: #FF0000 !important;
   }
 }
 
