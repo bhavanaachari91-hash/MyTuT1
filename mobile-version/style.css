@@ -920,3 +920,12 @@ a {
   }
 }
 
+/* Mobile Phone Dark Mode Override: Rust Orange Font */
+@media (max-width: 767px) and (prefers-color-scheme: dark) {
+  body, p, span, h1, h2, h3, h4, h5, h6, a, label, div,
+  .hero-title, .hero-subtitle, .section-title, .section-desc, .feature-title, .feature-desc {
+    color: #D9531E !important;
+  }
+}
+
+
