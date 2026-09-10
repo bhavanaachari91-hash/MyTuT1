@@ -37,6 +37,8 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+import { SchemaScript } from '@/lib/seo-helper';
+
 export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -72,6 +74,7 @@ export default function Contact() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <SchemaScript pageKey="contact" />
       
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto space-y-4 mb-16">
@@ -148,49 +151,6 @@ export default function Contact() {
               </div>
             </div>
 
-          </div>
-
-          {/* High Fidelity SVG Map Placeholder */}
-          <div className="bg-white dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800/50 rounded-3xl p-5 shadow-sm space-y-4">
-            <div className="flex justify-between items-center text-xs">
-              <span className="font-bold text-zinc-400">Office Location Map</span>
-              <span className="text-indigo-650 dark:text-indigo-400 font-semibold flex items-center space-x-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping mr-1" />
-                <span>37.7749° N, 122.4194° W</span>
-              </span>
-            </div>
-            
-            {/* SVG Visual Map layout */}
-            <svg 
-              viewBox="0 0 400 220" 
-              className="w-full rounded-2xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-200/30 dark:border-zinc-850/50"
-            >
-              {/* grid lines */}
-              <line x1="50" y1="0" x2="50" y2="220" stroke="#EEF2F6" className="dark:stroke-zinc-900" strokeWidth="1" />
-              <line x1="100" y1="0" x2="100" y2="220" stroke="#EEF2F6" className="dark:stroke-zinc-900" strokeWidth="1" />
-              <line x1="150" y1="0" x2="150" y2="220" stroke="#EEF2F6" className="dark:stroke-zinc-900" strokeWidth="1" />
-              <line x1="200" y1="0" x2="200" y2="220" stroke="#EEF2F6" className="dark:stroke-zinc-900" strokeWidth="1" />
-              <line x1="250" y1="0" x2="250" y2="220" stroke="#EEF2F6" className="dark:stroke-zinc-900" strokeWidth="1" />
-              <line x1="300" y1="0" x2="300" y2="220" stroke="#EEF2F6" className="dark:stroke-zinc-900" strokeWidth="1" />
-              <line x1="350" y1="0" x2="350" y2="220" stroke="#EEF2F6" className="dark:stroke-zinc-900" strokeWidth="1" />
-
-              <line x1="0" y1="40" x2="400" y2="40" stroke="#EEF2F6" className="dark:stroke-zinc-900" strokeWidth="1" />
-              <line x1="0" y1="80" x2="400" y2="80" stroke="#EEF2F6" className="dark:stroke-zinc-900" strokeWidth="1" />
-              <line x1="0" y1="120" x2="400" y2="120" stroke="#EEF2F6" className="dark:stroke-zinc-900" strokeWidth="1" />
-              <line x1="0" y1="160" x2="400" y2="160" stroke="#EEF2F6" className="dark:stroke-zinc-900" strokeWidth="1" />
-              <line x1="0" y1="200" x2="400" y2="200" stroke="#EEF2F6" className="dark:stroke-zinc-900" strokeWidth="1" />
-
-              {/* Styled Road lines */}
-              <path d="M 0,90 Q 150,110 400,100" fill="none" stroke="#E2E8F0" className="dark:stroke-zinc-800" strokeWidth="12" strokeLinecap="round" />
-              <path d="M 170,0 C 180,100 160,180 180,220" fill="none" stroke="#E2E8F0" className="dark:stroke-zinc-800" strokeWidth="12" strokeLinecap="round" />
-              
-              {/* HQ Marker */}
-              <circle cx="175" cy="103" r="16" fill="rgba(99, 102, 241, 0.2)" className="animate-ping duration-2000" />
-              <circle cx="175" cy="103" r="8" fill="#6366F1" stroke="white" strokeWidth="2" />
-              <path d="M175 75 L175 92" fill="none" stroke="#6366F1" strokeWidth="2" strokeDasharray="3 3" />
-              <rect x="135" y="55" width="80" height="20" rx="4" fill="#6366F1" />
-              <text x="175" y="68" fill="white" className="font-bold text-[8px]" textAnchor="middle">mytut HQ</text>
-            </svg>
           </div>
 
         </div>

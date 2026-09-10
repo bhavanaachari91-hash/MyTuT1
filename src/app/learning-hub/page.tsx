@@ -69,20 +69,23 @@ const MODULES = [
   },
 ];
 
+import { SchemaScript } from '@/lib/seo-helper';
+
 export default function LearningHub() {
   const { user } = useAuth();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <SchemaScript pageKey="learningHub" />
       
       {/* Welcome Banner */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-indigo-950 via-purple-900 to-zinc-950 text-white rounded-3xl p-8 sm:p-12 mb-12 shadow-xl border border-indigo-900/30">
+      <div className="relative overflow-hidden bg-[#3A86FF] text-white rounded-3xl p-8 sm:p-12 mb-12 shadow-xl border border-[#2B75EE]">
         {/* Educational Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-overlay pointer-events-none"
+          className="absolute inset-0 bg-cover bg-center opacity-15 mix-blend-overlay pointer-events-none"
           style={{ backgroundImage: "url('/edu-bg.jpg')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/80 via-purple-950/70 to-indigo-950/80 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/10 pointer-events-none" />
 
         <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
         <div className="relative z-10 max-w-2xl space-y-4">

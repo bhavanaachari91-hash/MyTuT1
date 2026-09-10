@@ -18,12 +18,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://mytut.in'),
   title: {
-    default: "myTuT | Gamified Learning & Study Companion (Classes 6–10)",
-    template: "%s | myTuT"
+    default: "TuT | Gamified Learning & Study Companion (Classes 6–10)",
+    template: "%s | TuT"
   },
-  description: "myTuT is India's leading gamified learning app for Class 6 to Class 10 CBSE & State Board students. Experience 1-on-1 subject battles, Quick Bite micro-learning, personalized study planners, and parent analytics.",
+  description: "TuT is India's leading gamified learning app for Class 6 to Class 10 CBSE & State Board students. Experience 1-on-1 subject battles, Quick Bite micro-learning, personalized study planners, and parent analytics.",
   keywords: [
-    "myTuT",
+    "TuT",
     "TuT App",
     "Class 6 to 10 study app",
     "CBSE learning app",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     "Quick Bite revision",
     "parent dashboard education"
   ],
-  authors: [{ name: "myTuT Team", url: "https://mytut.in" }],
-  creator: "myTuT",
-  publisher: "myTuT",
+  authors: [{ name: "TuT Team", url: "https://mytut.in" }],
+  creator: "TuT",
+  publisher: "TuT",
   formatDetection: {
     email: false,
     address: false,
@@ -46,18 +46,18 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "myTuT | Gamified Learning & Study Companion (Classes 6–10)",
+    title: "TuT | Gamified Learning & Study Companion (Classes 6–10)",
     description: "Empower Class 6 to 10 students with adaptive study planners, daily Quick Bite challenges, competitive student battles, and parent progress tracking.",
     url: 'https://mytut.in',
-    siteName: 'myTuT',
+    siteName: 'TuT',
     locale: 'en_IN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "myTuT | Gamified Learning & Study Companion (Classes 6–10)",
+    title: "TuT | Gamified Learning & Study Companion (Classes 6–10)",
     description: "Empower Class 6 to 10 students with adaptive study planners, daily Quick Bite challenges, competitive student battles, and parent progress tracking.",
-    creator: '@myTuTApp',
+    creator: '@TuTApp',
   },
   robots: {
     index: true,
@@ -79,24 +79,24 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const jsonLd = {
+  const orgJsonLd = {
     "@context": "https://schema.org",
-    "@type": "EducationalApplication",
-    "name": "myTuT",
-    "operatingSystem": "Android, iOS, Web",
-    "applicationCategory": "EducationalApplication",
-    "educationalLevel": "Class 6 to Class 10",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "INR"
+    "@type": "EducationalOrganization",
+    "name": "TuT",
+    "url": "https://mytut.in",
+    "logo": "https://mytut.in/logo.png",
+    "email": "admin@mytut.in",
+    "telephone": "+917207059060",
+    "location": {
+      "@type": "Place",
+      "name": "Remote Business Operations",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN",
+        "streetAddress": "Remote"
+      }
     },
-    "description": "Gamified learning platform for Class 6 to 10 CBSE & State Board students featuring 1-on-1 study battles, personalized study planners, daily Quick Bite micro-learning, and parent dashboards.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "myTuT",
-      "url": "https://mytut.in"
-    }
+    "description": "TuT is a gamified learning platform for Class 6 to 10 CBSE & State Board students featuring 1-on-1 study battles, personalized study planners, daily Quick Bite micro-learning, and parent dashboards."
   };
 
   return (
@@ -108,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 transition-colors duration-200">

@@ -12,6 +12,8 @@ import {
   ArrowRight
 } from 'lucide-react';
 
+import { SchemaScript } from '@/lib/seo-helper';
+
 const TEAM = [
   { name: 'Arun Mohan M.C', role: 'CEO & Co-Founder', bio: 'EdTech visionary with 15+ years experience driving innovative digital learning platforms.', initial: 'A' },
   { name: 'A. Bhavana', role: 'Head of Learning Design', bio: 'Curriculum expert, specializing in creating active learning templates for Classes 6-10.', initial: 'A' },
@@ -34,6 +36,7 @@ const ROADMAP = [
 export default function About() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+      <SchemaScript pageKey="about" />
       
       {/* Intro Hero */}
       <section className="text-center max-w-3xl mx-auto space-y-6">

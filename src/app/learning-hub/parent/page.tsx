@@ -60,6 +60,8 @@ const RECENT_LOGS = [
   { id: 'l4', event: 'Scored 94% in Math Ratios Contest #13', date: 'July 25, 06:12 PM', type: 'contest' },
 ];
 
+import { SchemaScript } from '@/lib/seo-helper';
+
 export default function ParentDashboard() {
   const [mounted, setMounted] = useState(false);
   const [childName, setChildName] = useState('Aarav Sharma');
@@ -89,6 +91,7 @@ export default function ParentDashboard() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <SchemaScript pageKey="parent" />
       
       {/* Back Navigation Bar */}
       <div className="mb-6">

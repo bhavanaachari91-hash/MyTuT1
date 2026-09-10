@@ -35,6 +35,8 @@ const DEFAULT_TASKS: Task[] = [
 
 const SUBJECTS = ['Mathematics', 'Science', 'Social Studies', 'English', 'Languages', 'Other'];
 
+import { SchemaScript } from '@/lib/seo-helper';
+
 export default function StudyPlanner() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [activeTab, setActiveTab] = useState<'daily' | 'weekly' | 'monthly'>('daily');
@@ -126,6 +128,7 @@ export default function StudyPlanner() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <SchemaScript pageKey="studyPlanner" />
       
       {/* Back Navigation Bar */}
       <div className="mb-6">

@@ -70,6 +70,8 @@ const QUIZ_QUESTIONS: QuizQuestion[] = [
   }
 ];
 
+import { SchemaScript } from '@/lib/seo-helper';
+
 export default function QuickBite() {
   const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'formulas'>('flashcards');
   const [selectedBoard, setSelectedBoard] = useState<'AP State Board' | 'CBSE Board'>('AP State Board');
@@ -132,6 +134,7 @@ export default function QuickBite() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <SchemaScript pageKey="quickBite" />
       
       {/* Back Navigation Bar */}
       <div className="mb-6">

@@ -49,6 +49,8 @@ const BADGES = [
   { id: 'b4', name: 'Perfect Score', desc: 'Answered all questions correctly', icon: '🎯', unlocked: true },
 ];
 
+import { SchemaScript } from '@/lib/seo-helper';
+
 export default function WeeklyContest() {
   const [registered, setRegistered] = useState(false);
   const [timeLeft, setTimeLeft] = useState({ hours: 14, minutes: 32, seconds: 40 });
@@ -88,6 +90,7 @@ export default function WeeklyContest() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <SchemaScript pageKey="contest" />
       
       {/* Back Navigation Bar */}
       <div className="mb-6">

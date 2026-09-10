@@ -165,6 +165,8 @@ const OPPONENTS = [
   { name: 'Priya Patel', school: 'National Public School', avatar: 'P', rating: 1460 }
 ];
 
+import { SchemaScript } from '@/lib/seo-helper';
+
 export default function BattlePage() {
   const [selectedSubject, setSelectedSubject] = useState<string>('Mathematics');
   const [gameState, setGameState] = useState<'lobby' | 'matching' | 'playing' | 'result'>('lobby');
@@ -254,7 +256,8 @@ export default function BattlePage() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <SchemaScript pageKey="battle" />
       
       {/* Top Navigation */}
       <div className="flex justify-between items-center mb-8">

@@ -1,0 +1,221 @@
+{
+  "siteConfig": {
+    "titleName": "TuT",
+    "logoUrl": "https://mytut.in/logo.png",
+    "logoPath": "C:\\Users\\Bhavana\\Downloads\\logo.png",
+    "businessLocation": "Remote",
+    "locationType": "Virtual / Remote Operations",
+    "url": "https://mytut.in",
+    "contactEmail": "admin@mytut.in",
+    "contactPhone": "+91 7207059060"
+  },
+  "organizationSchema": {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "TuT",
+    "url": "https://mytut.in",
+    "logo": "https://mytut.in/logo.png",
+    "email": "admin@mytut.in",
+    "telephone": "+917207059060",
+    "location": {
+      "@type": "Place",
+      "name": "Remote Business Operations",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN",
+        "streetAddress": "Remote"
+      }
+    },
+    "description": "TuT is a modern gamified learning platform for Class 6 to Class 10 CBSE & State Board students."
+  },
+  "pages": {
+    "home": {
+      "path": "/",
+      "metaTitle": "TuT | Gamified Learning & Study App (Classes 6–10)",
+      "metaDescription": "TuT is India's premier gamified learning app for Class 6 to 10 CBSE & State Board students. Access personalized study planners, 1-on-1 duels, Quick Bites, and parent tracking.",
+      "keywords": ["TuT", "TuT App", "Class 6-10 study app", "CBSE learning", "State Board prep", "gamified study"],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "EducationalApplication",
+        "name": "TuT",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Android, iOS, Web",
+        "educationalLevel": "Class 6 to Class 10",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "description": "Gamified learning platform for Class 6 to 10 CBSE & State Board students featuring 1-on-1 study battles, personalized study planners, daily Quick Bite micro-learning, and parent dashboards.",
+        "provider": {
+          "@type": "EducationalOrganization",
+          "name": "TuT",
+          "url": "https://mytut.in",
+          "logo": "https://mytut.in/logo.png",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Remote",
+            "addressCountry": "IN"
+          }
+        }
+      }
+    },
+    "learningHub": {
+      "path": "/learning-hub",
+      "metaTitle": "TuT Learning Hub | Interactive Study Modules (Classes 6–10)",
+      "metaDescription": "Explore TuT Learning Hub study modules: adaptive study planners, weekly live contests, 1-on-1 subject battles, Quick Bite micro-revision, and parent progress insights.",
+      "keywords": ["TuT Learning Hub", "Study Workstation", "Class 6-10 modules", "TuT Study Planner"],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "TuT Learning Hub",
+        "description": "All-in-one workstation for Class 6-10 students featuring Study Planners, Contests, Quick Bites, and Battles.",
+        "url": "https://mytut.in/learning-hub",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "TuT",
+          "url": "https://mytut.in"
+        }
+      }
+    },
+    "studyPlanner": {
+      "path": "/learning-hub/planner",
+      "metaTitle": "TuT Adaptive Study Planner | Organize Class 6–10 Syllabus",
+      "metaDescription": "Design daily, weekly, and monthly learning calendars on TuT. Break down chapters, set exam goals, and tick off study tasks seamlessly.",
+      "keywords": ["TuT Study Planner", "Adaptive Calendar", "Class 6-10 schedule", "exam preparation planner"],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TuT Adaptive Study Planner",
+        "applicationCategory": "ProductivityApplication",
+        "description": "Personalized study planner for Class 6 to Class 10 students to schedule revisions and monitor daily progress."
+      }
+    },
+    "battle": {
+      "path": "/learning-hub/battle",
+      "metaTitle": "TuT 1-on-1 Subject Battles | Real-Time Quiz Duels for Students",
+      "metaDescription": "Challenge fellow Class 6-10 students in real-time rapid subject duels on TuT. Test speed & accuracy, earn ELO ranks, and top global leaderboards.",
+      "keywords": ["TuT Battle", "1-on-1 study duel", "real time quiz battle", "Class 6-10 leaderboard"],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "TuT 1-on-1 Subject Battles",
+        "description": "Real-time educational quiz duel game for Class 6 to Class 10 students.",
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        }
+      }
+    },
+    "contest": {
+      "path": "/learning-hub/contest",
+      "metaTitle": "TuT Weekly Live Contests | Win Rewards & Performance Certificates",
+      "metaDescription": "Participate in TuT's weekly Sunday subject battles. Compete against peers, climb live leaderboards, earn XP badges, and download certificates.",
+      "keywords": ["TuT Weekly Contest", "Subject battles", "Learning certificates", "Sunday quiz battle"],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "TuT Sunday Weekly Live Contest",
+        "description": "Weekly online competitive quiz contest for students in Class 6 to 10.",
+        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "VirtualLocation",
+          "url": "https://mytut.in/learning-hub/contest"
+        },
+        "organizer": {
+          "@type": "EducationalOrganization",
+          "name": "TuT",
+          "url": "https://mytut.in"
+        }
+      }
+    },
+    "quickBite": {
+      "path": "/learning-hub/quick-bite",
+      "metaTitle": "TuT Quick Bites | 5-Minute Micro-Learning & Daily Quiz",
+      "metaDescription": "Revise core concepts in 5 minutes with TuT Quick Bites. Interactive flashcards, formulas, and daily streak quizzes for fast exam preparation.",
+      "keywords": ["TuT Quick Bites", "5-minute revision", "micro-learning flashcards", "daily quiz streak"],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "TuT Quick Bites",
+        "description": "Micro-learning modules, flashcards, and daily 5-minute quizzes for Class 6 to 10 students.",
+        "learningResourceType": "Flashcard / Quiz"
+      }
+    },
+    "parent": {
+      "path": "/learning-hub/parent",
+      "metaTitle": "TuT Parent Dashboard | Real-Time Child Progress & Analytics",
+      "metaDescription": "Track your child's study hours, attendance logs, weekly contest scores, and teacher feedback notes on the TuT Parent Dashboard.",
+      "keywords": ["TuT Parent Dashboard", "Child tracking", "Parental analytics", "Weekly study reports"],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "TuT Parent Dashboard",
+        "description": "Comprehensive tracking dashboard for parents to monitor academic growth and attendance.",
+        "url": "https://mytut.in/learning-hub/parent"
+      }
+    },
+    "blog": {
+      "path": "/blog",
+      "metaTitle": "TuT Blog | Study Guides, Parent Advice & Exam Tips",
+      "metaDescription": "Read latest articles on Class 10 math revision techniques, growth mindset for middle-schoolers, time management, and CBSE exam strategies on TuT.",
+      "keywords": ["TuT Blog", "Study tips Class 10", "Parent advice", "Exam preparation guides"],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "TuT Educational Blog",
+        "description": "Official blog of TuT offering study advice, revision tips, and parent guidance.",
+        "url": "https://mytut.in/blog"
+      }
+    },
+    "faq": {
+      "path": "/faq",
+      "metaTitle": "TuT FAQs & Support | Answers to Syllabus, Contests & Accounts",
+      "metaDescription": "Find quick answers to frequently asked questions about TuT school syllabus alignment, weekly contest rules, parent account setups, and mobile apps.",
+      "keywords": ["TuT FAQs", "TuT Help", "Syllabus alignment", "Contest rules"],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "name": "TuT Frequently Asked Questions",
+        "url": "https://mytut.in/faq"
+      }
+    },
+    "about": {
+      "path": "/about",
+      "metaTitle": "About TuT | Empowering Class 6–10 Students Through Gamified Prep",
+      "metaDescription": "Learn about TuT's mission to transform traditional K-10 study routines into exciting, gamified experiences for students across CBSE & State Boards.",
+      "keywords": ["About TuT", "TuT Mission", "Gamified Education Platform"],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About TuT",
+        "description": "Mission, vision, and core team behind TuT gamified education.",
+        "url": "https://mytut.in/about"
+      }
+    },
+    "contact": {
+      "path": "/contact",
+      "metaTitle": "Contact TuT | Official Support Desk & Inquiries",
+      "metaDescription": "Get in touch with TuT support team for inquiries on student subscriptions, school partnerships, or technical help. Remote support operates 24/7.",
+      "keywords": ["Contact TuT", "TuT Support", "Admin email admin@mytut.in"],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact TuT",
+        "url": "https://mytut.in/contact",
+        "mainEntity": {
+          "@type": "EducationalOrganization",
+          "name": "TuT",
+          "email": "admin@mytut.in",
+          "telephone": "+917207059060",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Remote",
+            "addressCountry": "IN"
+          }
+        }
+      }
+    }
+  }
+}

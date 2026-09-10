@@ -62,7 +62,7 @@ export default function Footer() {
   return (
     <footer className="bg-zinc-550 border-t border-zinc-200/50 dark:border-zinc-800/50 bg-white dark:bg-zinc-950 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-8">
           
           {/* Brand Info */}
           <div className="space-y-4">
@@ -121,6 +121,40 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Classes Section */}
+          <div>
+            <h3 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider mb-4">
+              Classes
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/learning-hub?class=6" className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors font-medium">
+                  Class 6
+                </Link>
+              </li>
+              <li>
+                <Link href="/learning-hub?class=7" className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors font-medium">
+                  Class 7
+                </Link>
+              </li>
+              <li>
+                <Link href="/learning-hub?class=8" className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors font-medium">
+                  Class 8
+                </Link>
+              </li>
+              <li>
+                <Link href="/learning-hub?class=9" className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors font-medium">
+                  Class 9
+                </Link>
+              </li>
+              <li>
+                <Link href="/learning-hub?class=10" className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors font-medium">
+                  Class 10
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Platform Features */}
           <div>
             <h3 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider mb-4">
@@ -129,7 +163,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-zinc-700 dark:text-zinc-300">
               <li>
                 <Link href="/learning-hub/planner" className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors font-medium">
-                  Gamified Study Planner
+                  Study Planner
                 </Link>
               </li>
               <li>
@@ -139,7 +173,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/learning-hub/quick-bite" className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors font-medium">
-                  5-Minute Quick Bites
+                  5-Min Quick Bites
                 </Link>
               </li>
               <li>

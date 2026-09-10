@@ -114,19 +114,22 @@ const FAQS = [
   }
 ];
 
+import { SchemaScript } from '@/lib/seo-helper';
+
 export default function Home() {
   const [activeTab, setActiveTab] = useState<'student' | 'parent'>('student');
 
   return (
     <div className="flex flex-col min-h-screen">
+      <SchemaScript pageKey="home" />
       
 
 
       {/* PROMINENT TOP APP PROMOTION BANNER */}
-      <section className="relative overflow-hidden py-10 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white border-b border-indigo-700/50 shadow-xl">
+      <section className="relative overflow-hidden py-10 bg-[#81A6C6] text-white border-b border-[#698EA9] shadow-xl">
         {/* Background glow effects */}
-        <div className="absolute -top-24 -left-24 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-black/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -184,12 +187,21 @@ export default function Home() {
                   <span>100% Free Download</span>
                 </div>
                 
-                {/* Minimal QR Code Badge */}
-                <div className="flex items-center space-x-2 bg-white/10 px-3 py-1.5 rounded-lg border border-white/15 backdrop-blur-xs">
-                  <div className="w-6 h-6 bg-white p-0.5 rounded flex items-center justify-center text-zinc-900 font-extrabold text-[8px] tracking-tighter">
-                    QR
+                {/* QR Code Scan Section */}
+                <div className="flex items-center space-x-3 bg-white/10 px-3.5 py-2 rounded-xl border border-white/20 backdrop-blur-md">
+                  <div className="w-12 h-12 bg-white p-1 rounded-lg flex items-center justify-center shrink-0 shadow-md">
+                    <Image 
+                      src="/qr-code.png" 
+                      alt="Scan QR Code to download TuT Mobile App" 
+                      width={44} 
+                      height={44} 
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-                  <span className="text-[11px] text-zinc-200 font-medium">Scan to Install App</span>
+                  <div className="text-left">
+                    <p className="text-xs font-bold text-white leading-tight">Scan QR Code</p>
+                    <p className="text-[10px] text-zinc-300">Scan to Install Mobile App</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -750,8 +762,8 @@ export default function Home() {
             {/* Latest Blogs Column */}
             <div className="lg:col-span-6 space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">From the Blog</h2>
-                <p className="text-sm text-zinc-550 dark:text-zinc-400">
+                <h2 className="text-[16px] sm:text-3xl font-extrabold tracking-tight">From the Blog</h2>
+                <p className="text-[16px] sm:text-sm text-zinc-550 dark:text-zinc-400">
                   Read our latest study guides, parental tips, and educational articles.
                 </p>
               </div>
@@ -760,31 +772,31 @@ export default function Home() {
                 
                 {/* Blog Card 1 */}
                 <div className="group bg-zinc-50 dark:bg-zinc-950 border border-zinc-200/50 dark:border-zinc-800/50 rounded-2xl p-5 hover:shadow-md transition-shadow">
-                  <span className="text-xs font-bold text-indigo-650 dark:text-indigo-400 uppercase tracking-widest">Study Tips</span>
-                  <h3 className="font-bold text-base mt-2 group-hover:text-indigo-650 dark:group-hover:text-indigo-400 transition-colors">
+                  <span className="text-[16px] sm:text-xs font-bold text-indigo-650 dark:text-indigo-400 uppercase tracking-widest">Study Tips</span>
+                  <h3 className="font-bold text-[16px] sm:text-base mt-2 group-hover:text-indigo-650 dark:group-hover:text-indigo-400 transition-colors">
                     5 Revision Techniques to Ace Class 10 Math Exams
                   </h3>
-                  <p className="text-xs text-zinc-550 dark:text-zinc-450 mt-1">
+                  <p className="text-[16px] sm:text-xs text-zinc-550 dark:text-zinc-455 mt-1">
                     Master active recall, space repetition, and customizable formulas to excel in board examinations.
                   </p>
-                  <Link href="/blog" className="inline-flex items-center space-x-1 text-xs text-zinc-700 dark:text-zinc-350 font-bold mt-4">
+                  <Link href="/blog" className="inline-flex items-center space-x-1 text-[16px] sm:text-xs text-zinc-700 dark:text-zinc-350 font-bold mt-4">
                     <span>Read article</span>
-                    <ChevronRight className="h-3 w-3" />
+                    <ChevronRight className="h-4 w-4 sm:h-3 sm:w-3" />
                   </Link>
                 </div>
 
                 {/* Blog Card 2 */}
                 <div className="group bg-zinc-50 dark:bg-zinc-950 border border-zinc-200/50 dark:border-zinc-800/50 rounded-2xl p-5 hover:shadow-md transition-shadow">
-                  <span className="text-xs font-bold text-emerald-650 dark:text-emerald-400 uppercase tracking-widest">Parent Guidance</span>
-                  <h3 className="font-bold text-base mt-2 group-hover:text-indigo-650 dark:group-hover:text-indigo-400 transition-colors">
+                  <span className="text-[16px] sm:text-xs font-bold text-emerald-650 dark:text-emerald-400 uppercase tracking-widest">Parent Guidance</span>
+                  <h3 className="font-bold text-[16px] sm:text-base mt-2 group-hover:text-indigo-650 dark:group-hover:text-indigo-400 transition-colors">
                     Fostering a Growth Mindset in Middle-Schoolers
                   </h3>
-                  <p className="text-xs text-zinc-550 dark:text-zinc-450 mt-1">
+                  <p className="text-[16px] sm:text-xs text-zinc-550 dark:text-zinc-455 mt-1">
                     How constructive feedback on effort, rather than intelligence, helps teenagers overcome learning anxiety.
                   </p>
-                  <Link href="/blog" className="inline-flex items-center space-x-1 text-xs text-zinc-700 dark:text-zinc-350 font-bold mt-4">
+                  <Link href="/blog" className="inline-flex items-center space-x-1 text-[16px] sm:text-xs text-zinc-700 dark:text-zinc-350 font-bold mt-4">
                     <span>Read article</span>
-                    <ChevronRight className="h-3 w-3" />
+                    <ChevronRight className="h-4 w-4 sm:h-3 sm:w-3" />
                   </Link>
                 </div>
 
@@ -793,7 +805,7 @@ export default function Home() {
               <div className="pt-2">
                 <Link
                   href="/blog"
-                  className="inline-flex items-center space-x-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+                  className="inline-flex items-center space-x-2 text-[16px] sm:text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
                 >
                   <span>Explore more blog posts</span>
                   <ArrowRight className="h-4 w-4" />

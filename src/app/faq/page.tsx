@@ -12,6 +12,8 @@ import {
   Sparkles
 } from 'lucide-react';
 
+import { SchemaScript } from '@/lib/seo-helper';
+
 interface FAQItem {
   id: string;
   category: 'General' | 'Students' | 'Parents' | 'Contests' | 'Study Planner' | 'Account' | 'Technical Support';
@@ -129,6 +131,7 @@ export default function FAQ() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <SchemaScript pageKey="faq" />
       
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto space-y-4 mb-12">
