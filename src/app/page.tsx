@@ -122,11 +122,148 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <SchemaScript pageKey="home" />
-      
 
+      {/* HERO SECTION */}
+      <section className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-b from-orange-100/30 via-white to-transparent dark:from-orange-950/20 dark:via-zinc-950 dark:to-transparent">
+        {/* Student Background Image & ambient glow shapes */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-15 dark:opacity-10 pointer-events-none"
+          style={{ backgroundImage: "url('/students-hero-bg.png')" }}
+        />
+        {/* Soft overlay gradient to ensure text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/85 to-white/95 dark:from-zinc-950/80 dark:via-zinc-950/90 dark:to-zinc-950 pointer-events-none" />
+        
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-orange-300/30 to-amber-300/20 blur-3xl pointer-events-none rounded-full" />
+        <div className="absolute top-1/3 right-10 w-72 h-72 bg-orange-200/30 blur-2xl pointer-events-none rounded-full" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Hero Content */}
+            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-pink-200/90 dark:bg-pink-950/70 border border-pink-300 dark:border-pink-800 text-pink-900 dark:text-pink-200 text-xs font-bold shadow-xs">
+                  <Sparkles className="h-4 w-4 text-pink-600 dark:text-pink-400 animate-bounce" />
+                  <span>Next-Gen Gamified Learning</span>
+                </div>
+                <a href="#download-app" className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xs font-bold shadow-md hover:scale-105 transition-transform cursor-pointer">
+                  <Smartphone className="h-3.5 w-3.5" />
+                  <span>📱 Mobile App Is Live!</span>
+                </a>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-normal text-zinc-900 dark:text-white">
+                {/* Mobile View: Learn. Win. Compete. Grow. */}
+                <span className="block sm:hidden">
+                  Learn. Win. Compete. <span className="inline-block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent pr-2 pb-1">Grow.</span>
+                </span>
+                {/* Desktop/Web View: Learn. Compete. Grow. */}
+                <span className="hidden sm:block">
+                  Learn. Compete. <span className="inline-block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent pr-3 pb-1">Grow.</span>
+                </span>
+              </h1>
+              <p className="text-lg text-zinc-800 dark:text-zinc-200 font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                Unlock your potential with gamified study planners, weekly live contests, 5-minute quick bites, and insightful performance dashboards for classes 6–10.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                <Link
+                  href="/auth/signup"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-2xl shadow-lg shadow-indigo-500/25 hover:shadow-xl transition-all font-bold flex items-center justify-center space-x-2 group cursor-pointer"
+                >
+                  <span>Get Started Free</span>
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/learning-hub"
+                  className="w-full sm:w-auto px-8 py-4 border-2 border-pink-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 rounded-2xl hover:bg-white/60 dark:hover:bg-zinc-900 transition-colors font-bold flex items-center justify-center"
+                >
+                  Explore Learning Hub
+                </Link>
+              </div>
+            </div>
+
+            {/* Live Leaderboard Overlay Card on Right */}
+            <div className="lg:col-span-5 relative flex justify-center">
+              <div className="w-full max-w-md p-6 sm:p-7 rounded-3xl bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md border border-pink-200 dark:border-zinc-800 shadow-xl space-y-5 relative">
+                {/* Decorative badge */}
+                <div className="absolute -top-3 right-6 px-3 py-1 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-[10px] font-extrabold uppercase tracking-wider shadow-md">
+                  Top Weekly Champions
+                </div>
+
+                <div className="flex items-center justify-between pb-3 border-b border-zinc-200 dark:border-zinc-800">
+                  <div className="flex items-center space-x-3">
+                    <div className="p-2.5 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 text-white shadow-md">
+                      <Trophy className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-extrabold text-zinc-900 dark:text-white text-base">Live Leaderboard</h4>
+                      <p className="text-xs text-zinc-600 dark:text-zinc-400 font-medium">Weekly Student Rankings</p>
+                    </div>
+                  </div>
+                  <span className="inline-flex items-center space-x-1 px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 text-xs font-extrabold border border-emerald-300 dark:border-emerald-800">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping mr-1" />
+                    Live
+                  </span>
+                </div>
+
+                {/* Top 3 Leaderboard Rankings */}
+                <div className="space-y-2.5">
+                  <div className="p-2.5 rounded-xl bg-orange-50 dark:bg-orange-950/30 border border-orange-200 dark:border-orange-900/40 flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-500 text-white flex items-center justify-center font-extrabold text-xs shadow-sm">1</span>
+                      <div>
+                        <p className="text-xs sm:text-sm font-extrabold text-zinc-900 dark:text-zinc-100">Aarav Sharma</p>
+                        <p className="text-[10px] text-zinc-600 dark:text-zinc-400 font-medium">Class 10 • AP State Board (Vijayawada)</p>
+                      </div>
+                    </div>
+                    <span className="text-xs font-extrabold text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/50 px-2 py-1 rounded-lg">2,450 XP</span>
+                  </div>
+
+                  <div className="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-850 border border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <span className="w-6 h-6 rounded-full bg-slate-400 text-white flex items-center justify-center font-extrabold text-xs shadow-sm">2</span>
+                      <div>
+                        <p className="text-xs sm:text-sm font-extrabold text-zinc-900 dark:text-zinc-100">Priya Patel</p>
+                        <p className="text-[10px] text-zinc-600 dark:text-zinc-400 font-medium">Class 9 • CBSE Board (Visakhapatnam)</p>
+                      </div>
+                    </div>
+                    <span className="text-xs font-extrabold text-amber-600 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/40 px-2 py-1 rounded-lg">2,180 XP</span>
+                  </div>
+
+                  <div className="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-850 border border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-700 text-white flex items-center justify-center font-extrabold text-xs shadow-sm">3</span>
+                      <div>
+                        <p className="text-xs sm:text-sm font-extrabold text-zinc-900 dark:text-zinc-100">Rohan Verma</p>
+                        <p className="text-[10px] text-zinc-600 dark:text-zinc-400 font-medium">Class 10 • AP State Board (Tirupati)</p>
+                      </div>
+                    </div>
+                    <span className="text-xs font-extrabold text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/40 px-2 py-1 rounded-lg">1,950 XP</span>
+                  </div>
+                </div>
+
+                {/* Footer link to contest leaderboard */}
+                <Link 
+                  href="/learning-hub/contest"
+                  className="flex items-center justify-between pt-2 text-xs font-extrabold text-orange-600 dark:text-orange-400 hover:text-orange-700 transition-colors group cursor-pointer"
+                >
+                  <span className="flex items-center">
+                    <Trophy className="h-3.5 w-3.5 mr-1.5" /> View Full Leaderboard
+                  </span>
+                  <span className="flex items-center group-hover:translate-x-1 transition-transform">
+                    Compete Now <ChevronRight className="h-4 w-4 ml-0.5" />
+                  </span>
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       {/* PROMINENT TOP APP PROMOTION BANNER */}
-      <section className="relative overflow-hidden py-10 bg-[#81A6C6] text-white border-b border-[#698EA9] shadow-xl">
+      <section id="download-app" className="relative overflow-hidden py-10 bg-[#81A6C6] text-white border-b border-[#698EA9] shadow-xl">
         {/* Background glow effects */}
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-black/10 rounded-full blur-3xl pointer-events-none" />
@@ -293,145 +430,6 @@ export default function Home() {
                   </div>
 
                 </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* HERO SECTION */}
-      <section className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-b from-orange-100/30 via-white to-transparent dark:from-orange-950/20 dark:via-zinc-950 dark:to-transparent">
-        {/* Student Background Image & ambient glow shapes */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-15 dark:opacity-10 pointer-events-none"
-          style={{ backgroundImage: "url('/students-hero-bg.png')" }}
-        />
-        {/* Soft overlay gradient to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/85 to-white/95 dark:from-zinc-950/80 dark:via-zinc-950/90 dark:to-zinc-950 pointer-events-none" />
-        
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-orange-300/30 to-amber-300/20 blur-3xl pointer-events-none rounded-full" />
-        <div className="absolute top-1/3 right-10 w-72 h-72 bg-orange-200/30 blur-2xl pointer-events-none rounded-full" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Hero Content */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
-                <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-pink-200/90 dark:bg-pink-950/70 border border-pink-300 dark:border-pink-800 text-pink-900 dark:text-pink-200 text-xs font-bold shadow-xs">
-                  <Sparkles className="h-4 w-4 text-pink-600 dark:text-pink-400 animate-bounce" />
-                  <span>Next-Gen Gamified Learning</span>
-                </div>
-                <a href="#download-app" className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xs font-bold shadow-md hover:scale-105 transition-transform cursor-pointer">
-                  <Smartphone className="h-3.5 w-3.5" />
-                  <span>📱 Mobile App Is Live!</span>
-                </a>
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-normal text-zinc-900 dark:text-white">
-                {/* Mobile View: Learn. Win. Compete. Grow. */}
-                <span className="block sm:hidden">
-                  Learn. Win. Compete. <span className="inline-block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent pr-2 pb-1">Grow.</span>
-                </span>
-                {/* Desktop/Web View: Learn. Compete. Grow. */}
-                <span className="hidden sm:block">
-                  Learn. Compete. <span className="inline-block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent pr-3 pb-1">Grow.</span>
-                </span>
-              </h1>
-              <p className="text-lg text-zinc-800 dark:text-zinc-200 font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Unlock your potential with gamified study planners, weekly live contests, 5-minute quick bites, and insightful performance dashboards for classes 6–10.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                <Link
-                  href="/auth/signup"
-                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-2xl shadow-lg shadow-indigo-500/25 hover:shadow-xl transition-all font-bold flex items-center justify-center space-x-2 group cursor-pointer"
-                >
-                  <span>Get Started Free</span>
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  href="/learning-hub"
-                  className="w-full sm:w-auto px-8 py-4 border-2 border-pink-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 rounded-2xl hover:bg-white/60 dark:hover:bg-zinc-900 transition-colors font-bold flex items-center justify-center"
-                >
-                  Explore Learning Hub
-                </Link>
-              </div>
-            </div>
-
-            {/* Live Leaderboard Overlay Card on Right */}
-            <div className="lg:col-span-5 relative flex justify-center">
-              <div className="w-full max-w-md p-6 sm:p-7 rounded-3xl bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md border border-pink-200 dark:border-zinc-800 shadow-xl space-y-5 relative">
-                {/* Decorative badge */}
-                <div className="absolute -top-3 right-6 px-3 py-1 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-[10px] font-extrabold uppercase tracking-wider shadow-md">
-                  Top Weekly Champions
-                </div>
-
-                <div className="flex items-center justify-between pb-3 border-b border-zinc-200 dark:border-zinc-800">
-                  <div className="flex items-center space-x-3">
-                    <div className="p-2.5 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 text-white shadow-md">
-                      <Trophy className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-extrabold text-zinc-900 dark:text-white text-base">Live Leaderboard</h4>
-                      <p className="text-xs text-zinc-600 dark:text-zinc-400 font-medium">Weekly Student Rankings</p>
-                    </div>
-                  </div>
-                  <span className="inline-flex items-center space-x-1 px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 text-xs font-extrabold border border-emerald-300 dark:border-emerald-800">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping mr-1" />
-                    Live
-                  </span>
-                </div>
-
-                {/* Top 3 Leaderboard Rankings */}
-                <div className="space-y-2.5">
-                  <div className="p-2.5 rounded-xl bg-orange-50 dark:bg-orange-950/30 border border-orange-200 dark:border-orange-900/40 flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <span className="w-6 h-6 rounded-full bg-amber-500 text-white flex items-center justify-center font-extrabold text-xs shadow-sm">1</span>
-                      <div>
-                        <p className="text-xs sm:text-sm font-extrabold text-zinc-900 dark:text-zinc-100">Aarav Sharma</p>
-                        <p className="text-[10px] text-zinc-600 dark:text-zinc-400 font-medium">Class 10 • AP State Board (Vijayawada)</p>
-                      </div>
-                    </div>
-                    <span className="text-xs font-extrabold text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/50 px-2 py-1 rounded-lg">2,450 XP</span>
-                  </div>
-
-                  <div className="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-850 border border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <span className="w-6 h-6 rounded-full bg-slate-400 text-white flex items-center justify-center font-extrabold text-xs shadow-sm">2</span>
-                      <div>
-                        <p className="text-xs sm:text-sm font-extrabold text-zinc-900 dark:text-zinc-100">Priya Patel</p>
-                        <p className="text-[10px] text-zinc-600 dark:text-zinc-400 font-medium">Class 9 • CBSE Board (Visakhapatnam)</p>
-                      </div>
-                    </div>
-                    <span className="text-xs font-extrabold text-amber-600 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/40 px-2 py-1 rounded-lg">2,180 XP</span>
-                  </div>
-
-                  <div className="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-850 border border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <span className="w-6 h-6 rounded-full bg-amber-700 text-white flex items-center justify-center font-extrabold text-xs shadow-sm">3</span>
-                      <div>
-                        <p className="text-xs sm:text-sm font-extrabold text-zinc-900 dark:text-zinc-100">Rohan Verma</p>
-                        <p className="text-[10px] text-zinc-600 dark:text-zinc-400 font-medium">Class 10 • AP State Board (Tirupati)</p>
-                      </div>
-                    </div>
-                    <span className="text-xs font-extrabold text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/40 px-2 py-1 rounded-lg">1,950 XP</span>
-                  </div>
-                </div>
-
-                {/* Footer link to contest leaderboard */}
-                <Link 
-                  href="/learning-hub/contest"
-                  className="flex items-center justify-between pt-2 text-xs font-extrabold text-orange-600 dark:text-orange-400 hover:text-orange-700 transition-colors group cursor-pointer"
-                >
-                  <span className="flex items-center">
-                    <Trophy className="h-3.5 w-3.5 mr-1.5" /> View Full Leaderboard
-                  </span>
-                  <span className="flex items-center group-hover:translate-x-1 transition-transform">
-                    Compete Now <ChevronRight className="h-4 w-4 ml-0.5" />
-                  </span>
-                </Link>
               </div>
             </div>
 
