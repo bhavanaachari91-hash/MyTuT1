@@ -154,9 +154,9 @@ export default function Home() {
                 </a>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-normal text-zinc-900 dark:text-white">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-normal text-zinc-900 dark:text-white max-sm:dark:text-white">
                 {/* Mobile View: Learn. Win. Compete. Grow. */}
-                <span className="block sm:hidden">
+                <span className="block sm:hidden max-sm:dark:text-white">
                   Learn. Win. Compete. <span className="inline-block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent pr-2 pb-1">Grow.</span>
                 </span>
                 {/* Desktop/Web View: Learn. Compete. Grow. */}
@@ -164,7 +164,7 @@ export default function Home() {
                   Learn. Compete. <span className="inline-block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent pr-3 pb-1">Grow.</span>
                 </span>
               </h1>
-              <p className="text-lg text-zinc-800 dark:text-zinc-200 font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-lg text-zinc-800 dark:text-zinc-200 max-sm:dark:text-white font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 Unlock your potential with gamified study planners, weekly live contests, 5-minute quick bites, and insightful performance dashboards for classes 6–10.
               </p>
               

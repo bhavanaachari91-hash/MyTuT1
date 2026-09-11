@@ -993,8 +993,10 @@ a {
   }
 
   .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
-  body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
-    color: #9DE0AD !important;
+  body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6,
+  .dark .hero-title, body.dark .hero-title,
+  .dark .hero-subtitle, body.dark .hero-subtitle {
+    color: #ffffff !important;
   }
 
   .dark p, .dark span, .dark a, .dark label, .dark div, .dark button, .dark input,
