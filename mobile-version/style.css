@@ -1003,8 +1003,8 @@ a {
   }
 
   .dark .hero-badge, body.dark .hero-badge {
-    background: #1F6F5F !important;
-    border-color: #154D42 !important;
+    background: #007979 !important;
+    border-color: #005C5C !important;
     color: #ffffff !important;
   }
 }
