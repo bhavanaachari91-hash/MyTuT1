@@ -346,7 +346,7 @@ function renderFormattedContent(content: string) {
         if (trimmed.startsWith('> ')) {
           const quoteText = trimmed.replace(/^>\s*/, '').replace(/^"|"$/g, '');
           return (
-            <blockquote key={i} className="p-4 sm:p-6 my-4 bg-indigo-50/80 dark:bg-indigo-950/40 border-l-4 border-indigo-600 rounded-r-xl italic text-indigo-950 dark:text-indigo-200 font-medium text-base sm:text-lg shadow-sm leading-relaxed">
+            <blockquote key={i} className="p-4 sm:p-6 my-4 bg-indigo-50/80 dark:bg-indigo-950/40 border-l-4 border-indigo-600 rounded-r-xl italic text-indigo-950 dark:text-indigo-200 font-medium text-[16px] sm:text-lg shadow-sm leading-relaxed">
               "{renderTextWithLinks(quoteText)}"
             </blockquote>
           );
@@ -357,14 +357,14 @@ function renderFormattedContent(content: string) {
           const intro = trimmed.split('\n- ')[0].startsWith('- ') ? null : trimmed.split('\n')[0];
           return (
             <div key={i} className="space-y-2.5 my-3">
-              {intro && <p className="font-medium text-zinc-800 dark:text-zinc-200 text-base sm:text-lg leading-relaxed">{renderTextWithLinks(intro)}</p>}
+              {intro && <p className="font-medium text-zinc-800 dark:text-zinc-200 text-[16px] sm:text-lg leading-relaxed">{renderTextWithLinks(intro)}</p>}
               <ul className="space-y-2.5 pl-1">
                 {lines.map((line, idx) => {
                   const cleanLine = line.replace(/^- /, '');
                   const parts = cleanLine.split('**');
                   if (parts.length >= 3) {
                     return (
-                      <li key={idx} className="flex items-start gap-2.5 text-base sm:text-lg leading-relaxed">
+                      <li key={idx} className="flex items-start gap-2.5 text-[16px] sm:text-lg leading-relaxed">
                         <span className="h-2.5 w-2.5 rounded-full bg-indigo-500 mt-2 shrink-0"></span>
                         <span>
                           <strong className="font-semibold text-zinc-900 dark:text-white">{parts[1]}</strong>
@@ -374,7 +374,7 @@ function renderFormattedContent(content: string) {
                     );
                   }
                   return (
-                    <li key={idx} className="flex items-start gap-2.5 text-base sm:text-lg leading-relaxed">
+                    <li key={idx} className="flex items-start gap-2.5 text-[16px] sm:text-lg leading-relaxed">
                       <span className="h-2.5 w-2.5 rounded-full bg-indigo-500 mt-2 shrink-0"></span>
                       <span>{renderTextWithLinks(cleanLine)}</span>
                     </li>
@@ -390,10 +390,10 @@ function renderFormattedContent(content: string) {
           if (parts.length >= 3) {
             return (
               <div key={i} className="bg-zinc-50 dark:bg-zinc-850/60 p-4 sm:p-6 rounded-2xl border border-zinc-200/60 dark:border-zinc-800 space-y-2 shadow-xs my-3">
-                <p className="font-bold text-zinc-900 dark:text-white text-base sm:text-lg">
+                <p className="font-bold text-zinc-900 dark:text-white text-[16px] sm:text-lg">
                   {renderTextWithLinks(parts[1])}
                 </p>
-                <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-350 leading-relaxed">
+                <p className="text-[16px] sm:text-lg text-zinc-600 dark:text-zinc-350 leading-relaxed">
                   {renderTextWithLinks(parts.slice(2).join('').replace(/^\s*<br\s*\/?>\s*/, '').trim())}
                 </p>
               </div>
@@ -404,7 +404,7 @@ function renderFormattedContent(content: string) {
         if (trimmed.startsWith('Download the TuT App now')) {
           return (
             <div key={i} className="my-4 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-950/50 border border-indigo-200/80 dark:border-indigo-800/60 shadow-xs">
-              <p className="font-semibold text-zinc-900 dark:text-white text-base sm:text-lg leading-relaxed">
+              <p className="font-semibold text-zinc-900 dark:text-white text-[16px] sm:text-lg leading-relaxed">
                 {renderTextWithLinks(trimmed)}
               </p>
             </div>
@@ -413,7 +413,7 @@ function renderFormattedContent(content: string) {
 
         const parts = trimmed.split('**');
         return (
-          <p key={i} className="leading-relaxed text-base sm:text-lg my-3">
+          <p key={i} className="leading-relaxed text-[16px] sm:text-lg my-3">
             {parts.map((part, pIdx) => 
               pIdx % 2 === 1 ? (
                 <strong key={pIdx} className="font-semibold text-zinc-900 dark:text-white">{renderTextWithLinks(part)}</strong>

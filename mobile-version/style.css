@@ -1001,6 +1001,12 @@ a {
   body.dark p, body.dark span, body.dark a, body.dark label, body.dark div, body.dark button, body.dark input {
     color: #E5FCC2 !important;
   }
+
+  .dark .hero-badge, body.dark .hero-badge {
+    background: #1F6F5F !important;
+    border-color: #154D42 !important;
+    color: #ffffff !important;
+  }
 }
 
 

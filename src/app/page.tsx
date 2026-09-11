@@ -142,8 +142,8 @@ export default function Home() {
             {/* Hero Content */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
-                <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-pink-200/90 dark:bg-pink-950/70 border border-pink-300 dark:border-pink-800 text-pink-900 dark:text-pink-200 text-xs font-bold shadow-xs">
-                  <Sparkles className="h-4 w-4 text-pink-600 dark:text-pink-400 animate-bounce" />
+                <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-pink-200/90 dark:bg-pink-950/70 max-sm:dark:bg-[#1F6F5F] border border-pink-300 dark:border-pink-800 max-sm:dark:border-[#154D42] text-pink-900 dark:text-pink-200 max-sm:dark:text-white text-xs font-bold shadow-xs">
+                  <Sparkles className="h-4 w-4 text-pink-600 dark:text-pink-400 max-sm:dark:text-emerald-200 animate-bounce" />
                   <span>Next-Gen Gamified Learning</span>
                 </div>
                 <a href="#download-app" className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xs font-bold shadow-md hover:scale-105 transition-transform cursor-pointer">
