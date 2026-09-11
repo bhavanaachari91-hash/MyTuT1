@@ -123,8 +123,10 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <SchemaScript pageKey="home" />
 
-      {/* HERO SECTION */}
-      <section className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-b from-orange-100/30 via-white to-transparent dark:from-orange-950/20 dark:via-zinc-950 dark:to-transparent">
+      {/* TOP CONTAINER WITH RESPONSIVE ORDERING */}
+      <div className="flex flex-col">
+        {/* HERO SECTION - Order 1 on mobile, Order 2 on desktop */}
+        <section className="order-1 sm:order-2 relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-b from-orange-100/30 via-white to-transparent dark:from-orange-950/20 dark:via-zinc-950 dark:to-transparent">
         {/* Student Background Image & ambient glow shapes */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-15 dark:opacity-10 pointer-events-none"
@@ -262,8 +264,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROMINENT TOP APP PROMOTION BANNER */}
-      <section id="download-app" className="relative overflow-hidden py-10 bg-[#81A6C6] text-white border-b border-[#698EA9] shadow-xl">
+      {/* PROMINENT TOP APP PROMOTION BANNER - Order 2 on mobile, Order 1 on desktop */}
+      <section id="download-app" className="order-2 sm:order-1 relative overflow-hidden py-10 bg-[#81A6C6] text-white border-b border-[#698EA9] shadow-xl">
         {/* Background glow effects */}
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-black/10 rounded-full blur-3xl pointer-events-none" />
@@ -436,6 +438,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </div>
 
       {/* STATISTICS */}
       <section className="py-12 bg-white dark:bg-zinc-900 border-y border-zinc-200/50 dark:border-zinc-800/50 transition-colors">
