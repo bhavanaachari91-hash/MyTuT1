@@ -75,15 +75,15 @@ body {
 /* Mobile Dark Mode Color Palette Integration */
 @media (max-width: 767px) {
   .dark {
-    --background: linear-gradient(135deg, #594F4F 0%, #547980 40%, #45ADA8 75%, #594F4F 100%) !important;
-    --foreground: #E5FCC2 !important;
-    background: linear-gradient(135deg, #594F4F 0%, #547980 40%, #45ADA8 75%, #594F4F 100%) !important;
-    color: #E5FCC2 !important;
+    --background: #7ADAA5 !important;
+    --foreground: #0F3822 !important;
+    background: #7ADAA5 !important;
+    color: #0F3822 !important;
   }
 
   .dark body {
-    background: linear-gradient(135deg, #594F4F 0%, #547980 40%, #45ADA8 75%, #594F4F 100%) !important;
-    color: #E5FCC2 !important;
+    background: #7ADAA5 !important;
+    color: #0F3822 !important;
   }
 
   .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
